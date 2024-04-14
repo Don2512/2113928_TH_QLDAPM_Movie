@@ -1,0 +1,20 @@
+<h1>Xem danh sách Phim</h1>
+<!-- Đảm bảo bạn đã thêm Bootstrap vào dự án của mình -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<section class="container mt-5">
+    <div class="row">
+        <div *ngFor="let Movie of MovieList" class="col-md-4 mb-3">
+            <div class="card">
+                <img class="card-img-top" [src]="Movie.photo" alt="Photo of {{Movie.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ Movie.name }}</h5>
+                    <p class="card-text">{{ Movie.describe }}</p>
+                    <p class="card-text"><small class="text-muted">Start: {{ Movie.dayStart | date:'mediumDate' }}</small></p>
+                    <p class="card-text"><small class="text-muted">End: {{ Movie.dayEnd | date:'mediumDate' }}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
