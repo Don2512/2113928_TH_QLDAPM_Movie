@@ -1,11 +1,17 @@
-require('dotenv').config();
-const mongoose =  require("mongoose"); 
+const mysql = require('mysql');
+const conn = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'Movie',
+});
 
-const connect = (uri) => {  
-    mongoose.connect(uri)
-.then(res => console.log(`Connection Succesful...`))
-.catch(err => console.log(`Error in DB connection`)); 
-}
+// Kết nối
+conn.connect((err) => {
+    if (err) throw err;
+    console.log('Kết nối thành công!');
+});
 
 
-module.exports = connect(process.env.mongoURI);    
+
+module.exports = conn;

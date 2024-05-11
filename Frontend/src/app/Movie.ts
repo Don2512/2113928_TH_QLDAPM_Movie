@@ -1,7 +1,7 @@
 export interface Movie {
     id: number;
     name: string;
-    describe: string;
+    description: string;
     photo: string;
     dayStart: Date;
     dayEnd: Date;

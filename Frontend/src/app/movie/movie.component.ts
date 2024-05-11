@@ -20,4 +20,6 @@ export class MovieComponent {
       this.MovieList = MovieList;
     });
   }
+
+  
 }

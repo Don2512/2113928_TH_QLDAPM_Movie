@@ -1,0 +1,32 @@
+<h1>Thêm Phim mới vào danh sách phim</h1>
+<!-- Đảm bảo bạn đã thêm Bootstrap vào dự án của mình -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<form (ngSubmit)="submitForm()" class="needs-validation" novalidate>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="adventure.name" required>
+        <div class="invalid-feedback">Please enter a name.</div>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea class="form-control" id="description" name="description" [(ngModel)]="adventure.description" required></textarea>
+        <div class="invalid-feedback">Please enter a description.</div>
+    </div>
+    <div class="mb-3">
+        <label for="photo" class="form-label">Photo URL:</label>
+        <input type="text" class="form-control" id="photo" name="photo" [(ngModel)]="adventure.photo" required>
+        <div class="invalid-feedback">Please enter a photo URL.</div>
+    </div>
+    <div class="mb-3">
+        <label for="dayStart" class="form-label">Start Date:</label>
+        <input type="date" class="form-control" id="dayStart" name="dayStart" [(ngModel)]="adventure.dayStart" required>
+        <div class="invalid-feedback">Please select a start date.</div>
+    </div>
+    <div class="mb-3">
+        <label for="dayEnd" class="form-label">End Date:</label>
+        <input type="date" class="form-control" id="dayEnd" name="dayEnd" [(ngModel)]="adventure.dayEnd" required>
+        <div class="invalid-feedback">Please select an end date.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
